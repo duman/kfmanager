@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    role: edit
+    user: sunumtest@test.com
+  name: sunumtest-test-com-sunum8-clusterrole-edit
+  namespace: sunum8
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: kubeflow-edit
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: sunumtest@test.com

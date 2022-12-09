@@ -1,0 +1,67 @@
+issuer: http://dex.auth.svc.cluster.local:5556/dex
+storage:
+  type: kubernetes
+  config:
+    inCluster: true
+web:
+  http: 0.0.0.0:5556
+logger:
+  level: debug
+  format: text
+oauth2:
+  skipApprovalScreen: true
+enablePasswordDB: true
+staticPasswords:
+  - email: testu1@test.com
+    hash: $2y$10$YORooBfC8CabFlSHgZY02eGaFu6AWpNBiVqvM9JOQdQ66ECrH6ZDy
+    username: testu1
+  - email: testu2@test.com
+    hash: $2y$10$A7.h/3tlSstwnnFzrqA2sumSY/9c2y1IAf3q9sRa6WwJ7dRUKeFGu
+    username: testu2
+  - email: testu3@test.com
+    hash: $2y$10$hv4XQGcJX87rH9KXGrxE.OJMr6lkiVy7MSBoXg.Sc0u166w9HQlhi
+    username: testu3
+  - email: testu4@test.com
+    hash: $2y$10$1PYq6LMo2R7B8EqgR.aKf.j3a9K06VJelm.EEZ39XqencGXLGfle.
+    username: testu4
+  - email: testu5@test.com
+    hash: $2y$10$favnJXm9QV4mXR0KuJBKeuc9.nBqQ0yVWBQAA9i5E7h6gkQsrztYq
+    username: testu5
+  - email: testu6@test.com
+    hash: $2y$10$ybL71gIlaajfjjSvtEb2SeGYE.ZTx3cxynQQVvlO4sRrpqnUhdFF6
+    username: testu6
+  - email: testu7@test.com
+    hash: $2y$10$KhBjsjXiT54fpz/B6i3Y2O4bWmg4cTEaHOpA1fTQNMlSA8efIpA.e
+    username: testu7
+  - email: testu8@test.com
+    hash: $2y$10$fzUhzqpuxuBlBnqNdZ/v/u7wv/sW23Gr1WCJk0ncgSDZMjN2elCNm
+    username: testu8
+  - email: ozgur@test.com
+    hash: $2y$10$Rl8dT2rP4Mv4LmJq4SemlekvQwDywAglhQhICkri6OtjAW3W.jXSi
+    username: ozgur
+  - email: kaanduman@test.com
+    hash: $2y$10$KViv.Zm934z1eMFWrQ.0geVpc0OvLwJbvfzd74lRSP/TP3nXbGM6C
+    username: kaanduman
+  - email: finaltest@test.com
+    hash: $2y$10$Mr/22qhNVgHWyRHnxp7XUOFkme/rDM9F7TtRGCPe17GTZaKTywRKi
+    username: finaltest
+  - email: allianztest@test.com
+    hash: $2y$10$QCE09VUGk5C04t9W8XYJBefIAZ7XKvC1z/Q9FdbhOunF7lh2zTxVG
+    username: allianztest
+  - email: sunumtest@test.com
+    hash: $2y$10$oBOogTvHRK4UmjrLTllVQOk5G20LnJS5haK/TA3qNF1hi/oAcqbLG
+    username: sunumtest
+  - email: oredata@oredata.com
+    hash: $2y$10$OPaHjlQ4P3jh2Hfl5TFxYOZ.ZIii7exfKF3P9O8cCMANeWY2wmKga
+    username: oredata
+  - email: oredata2@oredata.com
+    hash: $2y$10$bGJUFqqU33so2bpaqy0DSODYEhKDhTJF7QgMt0cy19BiT6SHn9lba
+    username: oredata2
+  - email: oredata3@oredata.com
+    hash: $2y$10$asg3EYDK6uWv0jpMZEf6c.6pg255j6AHaFnLZwJ5Pgc4Yrbpp5nLG
+    username: oredata3
+staticClients:
+  - idEnv: OIDC_CLIENT_ID
+    redirectURIs: ["/login/oidc"]
+    name: Dex Login Application
+    secretEnv: OIDC_CLIENT_SECRET

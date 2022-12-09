@@ -1,0 +1,15 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    role: edit
+    user: sunumtest@test.com
+  name: sunumtest-test-com-sunum8-clusterrole-edit
+  namespace: sunum8
+spec:
+  action: ALLOW
+  rules:
+    - when:
+      - key: request.headers[kubeflow-userid]
+        values:
+          - sunumtest@test.com

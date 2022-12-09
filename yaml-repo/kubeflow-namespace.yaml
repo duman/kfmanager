@@ -1,0 +1,14 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Profile
+metadata:
+  name: sunum9
+spec:
+  owner:
+    kind: User
+    name: nobody
+  resourceQuotaSpec:
+    hard:
+      cpu: 40m
+      memory: 1000Mi
+      nvidia.com/gpu: '0'
+      requests.storage: 100Mi
